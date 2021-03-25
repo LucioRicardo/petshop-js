@@ -18,7 +18,7 @@ let pets = [
         raca: 'Vira-lata',
         peso: 5,
         tutor: 'Muriel',
-        vacindo: false,
+        vacinado: false,
         servicos: ['banho', 'tosa']
     },
     {
@@ -28,7 +28,7 @@ let pets = [
         raca: 'Beagle',
         peso: 5,
         tutor: 'Charlie Brwon',
-        vacindo: false,
+        vacinado: true,
         servicos: ['banho', 'tosa']
     },
     {
@@ -38,16 +38,28 @@ let pets = [
         raca: 'Vira-lata',
         peso: 5,
         tutor: 'Bruxa do 71',
-        vacindo: false,
+        vacinado: false,
         servicos: ['banho', 'tosa', 'manicure']
     }
 ];
 
 const listarPets = () => {
     for(let pet of pets)
-        console.log(`O nome do pet é: ${pet.nome}`);
+        console.log(`O nome do pet é: ${pet.nome}.`);
 };
 
 listarPets();
+
+const vacinarPets = () => {
+    for(let pet of pets){
+        if(pet.vacinado == false){
+            pet.vacinado = true;
+            console.log(`O pet ${pet.nome} foi vacinado.`);
+        }
+    }
+};
+
+console.log();
+vacinarPets();
 
 //console.log(pet);
