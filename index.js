@@ -8,7 +8,7 @@ let pets = [
         raca: 'Vira-lata',
         peso: 3,
         tutor: 'Doug Funny',
-        vacinado: true,
+        vacinado: false,
         servicos: ['banho', 'tosa']
     },
     {
@@ -18,7 +18,7 @@ let pets = [
         raca: 'Vira-lata',
         peso: 5,
         tutor: 'Muriel',
-        vacindo: true,
+        vacindo: false,
         servicos: ['banho', 'tosa']
     },
     {
@@ -28,7 +28,7 @@ let pets = [
         raca: 'Beagle',
         peso: 5,
         tutor: 'Charlie Brwon',
-        vacindo: true,
+        vacindo: false,
         servicos: ['banho', 'tosa']
     },
     {
@@ -38,14 +38,14 @@ let pets = [
         raca: 'Vira-lata',
         peso: 5,
         tutor: 'Bruxa do 71',
-        vacindo: true,
+        vacindo: false,
         servicos: ['banho', 'tosa', 'manicure']
     }
 ];
 
 const listarPets = () => {
-    for(let i = 0; i < pets.length; i++)
-        console.log(pets[i].nome);
+    for(let pet of pets)
+        console.log(`O nome do pet é: ${pet.nome}`);
 };
 
 listarPets();
