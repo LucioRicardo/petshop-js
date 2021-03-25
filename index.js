@@ -9,7 +9,7 @@ let pets = [
         peso: 3,
         tutor: 'Doug Funny',
         vacinado: false,
-        servicos: ['banho', 'tosa']
+        servicos: ['tosa']
     },
     {
         nome: 'Coragem',
@@ -48,9 +48,7 @@ const listarPets = () => {
         console.log(`O nome do pet é: ${pet.nome}.`);
 };
 
-listarPets();
-
-const vacinarPets = (nome) => {
+const vacinarPet = (nome) => {
     for(let pet of pets){
         if(pet.nome == nome){
             pet.vacinado = true;
@@ -58,9 +56,6 @@ const vacinarPets = (nome) => {
         }
     }
 };
-
-console.log();
-vacinarPets();
 
 const campanhaVacina = () => {
     let petsVacinados = 0;
@@ -73,7 +68,57 @@ const campanhaVacina = () => {
     }
 };
 
+const novoCliente = (nome, tipo, idade, raca, peso, tutor, vacinado, servicos) => {
+    pets.push({nome: nome, tipo: tipo, idade: idade, raca: raca, peso: peso, tutor: tutor, vacinado: vacinado, servicos});
+};
+
+const darBanhoPet = (nome) => {
+    for(let pet of pets){
+        if(pet.nome == nome){
+            pet.servicos.push("banho");
+            console.log(`O pet ${pet.nome} está de banho tomado!`);
+        }
+    }
+};
+
+const tosarPet = (nome) => {
+    for(let pet of pets){
+        if(pet.nome == nome){
+            pet.servicos.push("tosa");
+            console.log(`O pet ${pet.nome} está com cabelinho na régua!`);
+        }
+    }
+};
+
+const apararUnhasPet = (nome) => {
+    for(let pet of pets){
+        if(pet.nome == nome){
+            pet.servicos.push("aparar unhas");
+            console.log(`O pet ${pet.nome} está de unhas aparadas!`);
+        }
+    }
+};
+
+
+listarPets();
+
+console.log();
+vacinarPet();
+
 console.log();
 campanhaVacina();
 
-//console.log(pet);
+console.log();
+novoCliente("Elsa", "Cachorro", 5, "Poodle", 5, "Lucio", true);
+
+console.log();
+listarPets();
+
+console.log();
+tosarPet("Coragem");
+
+console.log();
+darBanhoPet("Costelinha");
+
+console.log();
+apararUnhasPet("Satanás");
