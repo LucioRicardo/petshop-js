@@ -50,9 +50,9 @@ const listarPets = () => {
 
 listarPets();
 
-const vacinarPets = () => {
+const vacinarPets = (nome) => {
     for(let pet of pets){
-        if(pet.vacinado == false){
+        if(pet.nome == nome){
             pet.vacinado = true;
             console.log(`O pet ${pet.nome} foi vacinado.`);
         }
@@ -61,5 +61,19 @@ const vacinarPets = () => {
 
 console.log();
 vacinarPets();
+
+const campanhaVacina = () => {
+    let petsVacinados = 0;
+    for(let pet of pets){
+        if(pet.vacinado == false){
+            pet.vacinado = true;
+            petsVacinados++;
+            console.log(`O pet ${pet.nome} foi vacinado.`);
+        }
+    }
+};
+
+console.log();
+campanhaVacina();
 
 //console.log(pet);
