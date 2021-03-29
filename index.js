@@ -120,7 +120,8 @@ adicionarMiAu({ "nome" : "Ikky",
                 "peso" : 16,
                 "tutor" : "Himself",
                 "vacinado" : true,
-                "servicos" : []});
+                "servicos" : [] }
+);
 
 listarPets();
 
