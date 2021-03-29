@@ -103,9 +103,10 @@ const apararUnhasPet = nome => {
 };
 
 const atenderCliente = (pet, servico) => {
-    console.log("\nOlá, seja MUITO BEM-VINDO!");
-    console.log("Por favor, aguarde. Logo você será atendido!");
-    console.log("Serviço em execução...");
+    console.log("\nOlá, seja MUITO BEM-VINDO!",
+                "\nPor favor, aguarde. Logo você será atendido!",
+                "\nServiço em execução..."
+    );
     
     servico(pet);
 
