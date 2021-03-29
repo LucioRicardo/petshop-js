@@ -11,7 +11,12 @@ const atualizarBanco = () => {
 
 const listarPets = () => {
     for(let pet of listaPets.pets)
-        console.log(`Nome: ${pet.nome}, Tipo: ${pet.tipo}, Raça: ${pet.raca}, Tutor: ${pet.tutor}, Vacinado?: ${pet.vacinado ? "Vacinado" : "Não Vacinado"}, Serviços: ${pet.servicos}.`);
+        console.log(`   Nome: ${pet.nome},
+                        Tipo: ${pet.tipo},
+                        Raça: ${pet.raca},
+                        Tutor: ${pet.tutor},
+                        Vacinado?: ${pet.vacinado ? "Vacinado" : "Não Vacinado"},
+                        Serviços: ${pet.servicos}.  `);
 };
 
 const vacinarPet = nome => {
@@ -98,9 +103,13 @@ const apararUnhasPet = nome => {
 };
 
 const atenderCliente = (pet, servico) => {
-    console.log("\nPor favor, aguarde. Logo você será atendido!")
-    console.log("Serviço em execução...")
+    console.log("\nOlá, seja MUITO BEM-VINDO!");
+    console.log("Por favor, aguarde. Logo você será atendido!");
+    console.log("Serviço em execução...");
+    
     servico(pet);
+
+    console.log("\nObrigado e até uma próxima!");
 
     atualizarBanco();
 
