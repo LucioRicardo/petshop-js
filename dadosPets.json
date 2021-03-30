@@ -7,7 +7,7 @@
       "raca": "Vira-lata",
       "peso": 3,
       "tutor": "Doug Funny",
-      "vacinado": false,
+      "vacinado": true,
       "servicos": [
         {
           "serviço": "unhas aparadas",
@@ -22,8 +22,13 @@
       "raca": "Vira-lata",
       "peso": 5,
       "tutor": "Muriel",
-      "vacinado": false,
-      "servicos": []
+      "vacinado": true,
+      "servicos": [
+        {
+          "serviço": "tosa",
+          "data": "29-03-2021"
+        }
+      ]
     },
     {
       "nome": "Snoopy",
@@ -33,7 +38,12 @@
       "peso": 5,
       "tutor": "Charlie Brwon",
       "vacinado": true,
-      "servicos": []
+      "servicos": [
+        {
+          "serviço": "banho",
+          "data": "29-03-2021"
+        }
+      ]
     },
     {
       "nome": "Satanás",
@@ -42,8 +52,13 @@
       "raca": "Vira-lata",
       "peso": 5,
       "tutor": "Bruxa do 71",
-      "vacinado": false,
-      "servicos": []
+      "vacinado": true,
+      "servicos": [
+        {
+          "serviço": "unhas aparadas",
+          "data": "29-03-2021"
+        }
+      ]
     },
     {
       "nome": "Ikky",
