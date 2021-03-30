@@ -23,8 +23,8 @@ const listarPets = () => {
         Raça: ${raca},
         Tutor: ${tutor},
         Vacinado?: ${vacinado ? "Vacinado" : "Não Vacinado"},
-        Serviços: ${servicos}.
-    `);
+        Serviços: ${servicos.forEach(servico => console.log(`${servico.serviço} - ${servico.data}`))}.
+        `);
     });
 };
 
@@ -48,10 +48,15 @@ const campanhaVacina = () => {
  
 };
 
-const adicionarMiAu = novoPet => {
+const adicionarMiAu = arrayPets => {
         
-    listaPets.pets.push(novoPet);
+    listaPets.pets.push(...arrayPets);
+    
     atualizarBanco();
+
+    arrayPets.forEach(pet => {
+        console.log(`${pet.nome} foi adicionado.`)
+    });
 
 };
 
@@ -105,7 +110,7 @@ const atenderCliente = (pet, servico) => {
 
 };
 
-listarPets();
+//listarPets();
 
 //vacinarPet("Costelinha");
 
@@ -117,14 +122,24 @@ listarPets();
 
 //campanhaVacina();
 
-//adicionarMiAu({ "nome" : "Ikky",
-//                "tipo" : "Gato",
-//                "idade" : 12,
-//                "raca" : "Vira-lata",
-//                "peso" : 16,
-//                "tutor" : "Himself",
-//                "vacinado" : true,
-//                "servicos" : [] }
-//);
+adicionarMiAu([{ "nome" : "Bartolomeu",
+               "tipo" : "Gato",
+               "idade" : 11,
+               "raca" : "Vira-lata",
+               "peso" : 12,
+               "tutor" : "Figueiroa",
+               "vacinado" : true,
+               "servicos" : [] },
+                {
+               "nome": "Eva",
+               "tipo": "Gato",
+                "idade": 3,
+                "raca": "Persa",
+                "peso": 13,
+                "tutor": "Hendy",
+                "vacinado": true,
+                "servicos": []
+                }]
+);
 
 //listarPets();

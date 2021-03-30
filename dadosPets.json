@@ -69,6 +69,26 @@
       "tutor": "Himself",
       "vacinado": true,
       "servicos": []
+    },
+    {
+      "nome": "Bartolomeu",
+      "tipo": "Gato",
+      "idade": 11,
+      "raca": "Vira-lata",
+      "peso": 12,
+      "tutor": "Figueiroa",
+      "vacinado": true,
+      "servicos": []
+    },
+    {
+      "nome": "Eva",
+      "tipo": "Gato",
+      "idade": 3,
+      "raca": "Persa",
+      "peso": 13,
+      "tutor": "Hendy",
+      "vacinado": true,
+      "servicos": []
     }
   ]
 }
