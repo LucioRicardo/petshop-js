@@ -15,14 +15,17 @@ const buscarPet = nome => {
 };
 
 const listarPets = () => {
-    listaPets.pets.forEach(pet => console.log(`
-        Nome: ${pet.nome},
-        Tipo: ${pet.tipo},
-        Raça: ${pet.raca},
-        Tutor: ${pet.tutor},
-        Vacinado?: ${pet.vacinado ? "Vacinado" : "Não Vacinado"},
-        Serviços: ${pet.servicos}.
-    `));
+    listaPets.pets.forEach(pet => {
+        let {nome, tipo, raca, tutor, vacinado, servicos} = pet;
+        console.log(`
+        Nome: ${nome},
+        Tipo: ${tipo},
+        Raça: ${raca},
+        Tutor: ${tutor},
+        Vacinado?: ${vacinado ? "Vacinado" : "Não Vacinado"},
+        Serviços: ${servicos}.
+    `);
+    });
 };
 
 const vacinarPet = nome => {
@@ -40,14 +43,9 @@ const vacinarPet = nome => {
 
 const campanhaVacina = () => {
     let naoVacinados = listaPets.pets.filter(pet => pet.vacinado == false);
-    naoVacinados.forEach(pet => pet.vacinado = true, );
-    console.log();
-    naoVacinados.forEach(pet => console.log(`O pet ${pet.nome} foi vacinado nessa campanha!`));
-    
+    naoVacinados.map(pet => vacinarPet(pet));
     console.log(`\n${naoVacinados.length} pets foram vacinados nessa campanha.`);
-    atualizarBanco();
-    
-
+ 
 };
 
 const adicionarMiAu = novoPet => {
@@ -109,15 +107,15 @@ const atenderCliente = (pet, servico) => {
 
 listarPets();
 
-vacinarPet("Costelinha");
+//vacinarPet("Costelinha");
 
-tosarPet("Coragem");
+//tosarPet("Coragem");
 
-atenderCliente('Satanás', apararUnhasPet);
+//atenderCliente('Satanás', apararUnhasPet);
 
-darBanhoPet("Snoopy");
+//darBanhoPet("Snoopy");
 
-campanhaVacina();
+//campanhaVacina();
 
 //adicionarMiAu({ "nome" : "Ikky",
 //                "tipo" : "Gato",
